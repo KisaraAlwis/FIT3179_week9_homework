@@ -3,7 +3,7 @@
   "title": "Australian Residential Solar Installations (2020)",
   "width": 1000,
   "height": 500,
-  "projection": {"type": "identity","reflectY" : true},
+  "projection": {"type": "mercator"},
   "data": {
       "url": "data/SED_2020.json",
       "format": {"type": "topojson", "feature": "SED_2020_AUST"}
@@ -37,7 +37,9 @@
         "color": {
           "field": "Residential Installs Per 10,000 Households",
           "type": "quantitative",
-          "legend":{"titleLimit":220,"titleFontSize":10
+          "scale": {
+        "scheme": "blues"},
+          "legend":{"titleLimit":220,"titleFontSize":10, "offset": -200
       }},"tooltip": [
   {"field": "properties.SED_NAME20", "type": "nominal", "title":
   "Electorate"},
